@@ -10,7 +10,7 @@ from .models import MailModel
 
 
 def redirect(request):
-    response = redirect('/main/')
+    response = redirect('main')
     return response
 
 

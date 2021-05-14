@@ -12,5 +12,6 @@ urlpatterns = [
     path('photo_printing/', views.photo_printing, name='photo_printing'),
     path('photo_processing/', views.photo_processing, name='photo_processing'),
     path('services/', views.services, name='services'),
-    path('shirt_printing/', views.shirt_printing, name='shirt_printing')
+    path('shirt_printing/', views.shirt_printing, name='shirt_printing'),
+    path('', views.redirect, name='redirect')
 ]

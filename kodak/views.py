@@ -3,9 +3,15 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
+from django.shortcuts import redirect
 
 from .forms import OrderForm
 from .models import MailModel
+
+
+def redirect(request):
+    response = redirect('/main/')
+    return response
 
 
 def about(request):

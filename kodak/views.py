@@ -10,8 +10,7 @@ from .models import MailModel
 
 
 def redirect(request):
-    response = redirect('main')
-    return response
+    return render(request, 'main.html')
 
 
 def about(request):

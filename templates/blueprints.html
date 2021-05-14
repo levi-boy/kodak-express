@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Печать черчежей{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'components/header.html' %}
+
+    <style>
+        .background {
+            background: url("{% static 'img/blueprints/backgrounds.png' %}") center no-repeat;
+        }
+    </style>
+
+    <!-- PHOTO-PRINTING-INTRO -->
+    <div class="photo-printing-intro background" style="margin-top: 50px;">
+        <div class="blackout">
+            <div class="container">
+                <div class="photo-printing-intro__inner">
+                    <div class="photo-printing-intro__title blueprints_">
+                        Печать черчежей
+                    </div>
+                    <div class="separation"></div>
+                    <div class="photo-printing-intro__subtitle blueprints_">
+                        Низкие цены на печать чертежей. Чем крупнее заказ, тем меньше ваши расходы!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PHOTO-PRINTING-INTRO -->
+
+    <!-- PHOTO-PRINTING-CONTENT -->
+    <div class="photo-printing-content blueprints_">
+        <div class="container">
+            <div class="photo-printing-content__inner">
+                <div class="photo-printing-content__table">
+                    <div class="intro__left_content_btn">
+                        <a href="{% url 'order' %}">Сделать заказ</a>
+                    </div>
+                    <br>
+                    <br>
+                    <table class="photo-printing-content__table_item">
+                        <tr class="header_">
+                            <th class="first">Тип</th>
+                            <th class="second">Формат</th>
+                            <th class="third" style="width: 120px;">Цена</th>
+                        </tr>
+                        <tr>
+                            <td class="first">Офисная бумага</td>
+                            <td class="second">А4</td>
+                            <td class="third">12 р.</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Ватман</td>
+                            <td class="second">А3</td>
+                            <td class="third">60 р.</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Ватман</td>
+                            <td class="second">А2</td>
+                            <td class="third">120 р.</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Эконом 130 гр.</td>
+                            <td class="second">А3</td>
+                            <td class="third">150 р.</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Эконом 130 гр.</td>
+                            <td class="second">А2</td>
+                            <td class="third">300 р.</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Холст</td>
+                            <td class="second">А3</td>
+                            <td class="third">300 р.</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Холст</td>
+                            <td class="second">А2</td>
+                            <td class="third">590 р.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PHOTO-PRINTING-CONTENT -->
+
+
+    <div class="services">
+        <div class="container">
+            <div class="services__inner">
+                <div class="services__header">
+                    Услуги
+                </div>
+                <div class="services__content" style="max-width: 1200px;">
+                    
+                    <div class="services__item">
+                        <a href="{% url 'photo_printing' %}">
+                        <div class="services__title">Фотопечать</div>
+                        <img src="{% static 'img/our_services/items/icon1.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'document_printing' %}">
+                        <div class="services__title">Печать документов</div>
+                        <img src="{% static 'img/our_services/items/icon2.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'photo_processing' %}">
+                        <div class="services__title">Обработка фото</div>
+                        <img src="{% static 'img/our_services/items/icon3.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item" >
+                        <a href="{% url 'brochure_printing' %}">
+                        <div class="services__title">Печать брошюр</div>
+                        <img src="{% static 'img/our_services/items/icon5.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'shirt_printing' %}">
+                        <div class="services__title">Печать на футболках кружках</div>
+                        <img src="{% static 'img/our_services/items/icon6.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'components/footer.html' %}
+{% endblock %}

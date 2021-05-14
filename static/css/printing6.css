@@ -1,0 +1,29 @@
+.printing6 {
+    background: url('../img/printing6/background.png') center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    padding: 0 30px 50px;
+}
+
+.printing6__title {
+    color: #fff;
+    padding-top: 159px;
+    font-size: 48px;
+    text-align: center;
+}
+
+.printing6__subtitle {
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.printing6__panel {
+    max-width: 1170px;
+    background: #ECF0F3;
+    box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}

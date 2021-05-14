@@ -1,0 +1,34 @@
+.panel__inner {
+    padding: 30px 10px 50px;
+    position: relative;
+    max-width: 1170px;
+    width: 100%;
+    background: #ECF0F3;
+    /* Тень карточик */
+    box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+.panel__block {
+    max-width: 877px;
+    background: #FFFFFF;
+    margin: 0 auto;
+}
+
+.panel__block_item {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+}
+
+.panel__block_item:hover {
+    background-color: #EFEFEF;
+}
+
+@media (max-width: 900px) {
+    .panel__block_item div {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}

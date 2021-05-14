@@ -1,0 +1,67 @@
+.about {
+    background: linear-gradient(103.74deg, #FDC101 12.37%, #FFCA0F 88.05%);
+}
+
+.about__title {
+    padding-top: 40px;
+    font-family: Century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 78px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+
+    color: #000000;
+    background: linear-gradient(103.74deg, #FDC101 12.37%, #FFCA0F 88.05%);
+}
+
+.contacts {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact__item p:nth-child(2) {
+    margin-left: 20px;
+}
+
+@media (max-width: 760px) {
+    .contacts__item {
+        max-width: 1200px;
+        width: 100%;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 570px) {
+    .about__title {
+        font-size: 48px;
+    }
+
+    .contact__item p {
+        font-size: 18px;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .services__header {font-size: 48px;}
+
+    .contact__item img {display: none;}
+}
+
+@media (max-width: 470px) {
+    .contacts__item {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Печать на футболках и кружках{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'css/panel.css' %}">
+{% endblock %}
+
+{% block content %}
+    <style>
+        .intro__left_content_btn.printing6 {
+            display: none;
+        }
+
+        @media (max-width: 1200px) {
+            .photo-printing-intro__title.blueprints_ {
+                font-size: 48px;
+            }
+
+            .photo-printing-intro__subtitle {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .panel__block_item div:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .photo-printing-intro__title.blueprints_ {
+                font-size: 32px;
+            }
+
+            .photo-printing-intro__subtitle.blueprints_ {
+                font-size: 22px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .panel {display: none;}
+            .photo-printing-intro__subtitle.blueprints_ {font-size: 30px;}
+            .intro__left_content_btn.printing6 {display: block; margin-top: 120px;}
+        }
+
+        @media (max-width: 490px) {
+            .panel {display: none;}
+            .photo-printing-intro__title.blueprints_ {line-height: 2;}
+            .photo-printing-intro__subtitle.blueprints_ {font-size: 30px; }
+            .intro__left_content_btn.printing6 {display: block; margin-top: 84px; }
+            .intro__left_content_btn a {font-size: 30px;}
+        }
+
+        @media (max-width: 380px) {
+            .photo-printing-intro__subtitle.blueprints_ {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .photo-printing-intro__subtitle.blueprints_ {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+{% include 'components/header.html' %}
+
+    <style>
+        .background {
+            background: url("{% static 'img/shirt_printing/background.png' %}") center no-repeat;
+        }
+    </style>
+
+    <!-- PHOTO-PRINTING-INTRO -->
+    <div class="photo-printing-intro background" style="margin-top: 50px;">
+        <div class="blackout">
+            <div class="container">
+                <div class="photo-printing-intro__inner">
+                    <div class="photo-printing-intro__title blueprints_">
+                        Печать на футболках и кружках
+                    </div>
+                    <div class="separation"></div>
+                    <div class="photo-printing-intro__subtitle blueprints_">
+                        Нанесение Ваших фотографий на кружки, магниты, футболки, брелоки, подушки, пазлы, коврики и др.
+                    </div>
+
+                    <div class="intro__left_content_btn printing6">
+                        <a href="{% url 'order' %}">Сделать заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PHOTO-PRINTING-INTRO -->
+
+    <div class="panel" style="height: 600px;background: linear-gradient(103.74deg, #FDC101 12.37%, #FFCA0F 88.05%);">
+        <div class="container">
+            <div class="panel__inner" style="top: -395px;">
+                <div class="intro__left_content_btn">
+                    <a href="{% url 'order' %}">Сделать заказ</a>
+                </div>
+                <div class="blocks" style="margin-top: 30px;">
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="background: #EFEFEF; border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 40%;">Кружки</div>
+                            <div style="flex-basis: 20%;">Цена</div>
+                            <div style="flex-basis: 30%;">Дополнительно</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 40%;">Кружки белые</div>
+                            <div style="flex-basis: 20%;">350 р.</div>
+                            <div style="flex-basis: 30%;">Оптовые скидки</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 40%;">Цветной ободок и ручка</div>
+                            <div style="flex-basis: 20%;">390 р.</div>
+                            <div style="flex-basis: 30%;">—</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 40%;">Цветная внутри</div>
+                            <div style="flex-basis: 20%;">450 р.</div>
+                            <div style="flex-basis: 30%;">—</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 40%;">Матовое стекло</div>
+                            <div style="flex-basis: 20%;">500 р.</div>
+                            <div style="flex-basis: 30%;">—</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 40%;">С фигурными ручками</div>
+                            <div style="flex-basis: 20%;">550 р.</div>
+                            <div style="flex-basis: 30%;">—</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blocks" style="margin-top: 30px;">
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="background: #EFEFEF; border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 35%;">Тип</div>
+                            <div style="flex-basis: 15%;">Цена</div>
+                            <div style="flex-basis: 40%;">Дополнительно</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 35%;">Печать на футболках</div>
+                            <div style="flex-basis: 15%;">750 р.</div>
+                            <div style="flex-basis: 40%;">Оптовикам скидки. Формат изображения до А3 ,вторая сторона +200р.</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 35%;">Полноцветная термосублимационная печать на ткани (40х60)</div>
+                            <div style="flex-basis: 15%;">от 200 р.</div>
+                            <div style="flex-basis: 40%;">Только синтетические ткани</div>
+                        </div>
+                    </div>
+                    <div class="panel__block">
+                        <div class="panel__block_item" style="border-top: 2px solid #D5D5D5;">
+                            <div style="flex-basis: 35%;">Подушки</div>
+                            <div style="flex-basis: 15%;">650 р.</div>
+                            <div style="flex-basis: 40%;">Вторая сторона + 200р.</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="services">
+        <div class="container">
+            <div class="services__inner">
+                <div class="services__header">
+                    Услуги
+                </div>
+                <div class="services__content" style="max-width: 1200px;">
+                    <div class="services__item">
+                        <a href="{% url 'photo_printing' %}">
+                        <div class="services__title">Фотопечать</div>
+                        <img src="{% static 'img/our_services/items/icon1.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'document_printing' %}">
+                        <div class="services__title">Печать документов</div>
+                        <img src="{% static 'img/our_services/items/icon2.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'photo_processing' %}">
+                        <div class="services__title">Обработка фото</div>
+                        <img src="{% static 'img/our_services/items/icon3.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'blueprints' %}">
+                        <div class="services__title">Печать чертежей</div>
+                        <img src="{% static 'img/our_services/items/icon4.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'brochure_printing' %}">
+                        <div class="services__title">Печать брошюр</div>
+                        <img src="{% static 'img/our_services/items/icon5.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'components/footer.html' %}
+{% endblock %}

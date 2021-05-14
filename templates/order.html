@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Оформление заказа{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'css/order.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'components/header.html' %}
+    
+    <main>
+        <div class="order">
+            <div class="order__title">
+                Введите данные для заказа
+            </div>
+            <div class="separation"></div>
+            <div class="order__subtitle">Выберите фото и файлы для печати</div>
+            <form class="order__panel" action="." method="POST" enctype="multipart/form-data">
+                <div class="order__files">
+                    <div class="order__file">
+                        <input type="file" name="photo_file" id="selectedFile" style="display: none;" />
+                        <input type="button" value="Выберите фото"
+                            onclick="document.getElementById('selectedFile').click();" />
+                    </div>
+                    <div class="order__file">
+                        <input type="file" name="document_file" id="selectedFile2" style="display: none;" />
+                        <input type="button" value="Выберите файл"
+                            onclick="document.getElementById('selectedFile2').click();" />
+                    </div>
+                </div>
+                <div class="order_datas">
+                    {% csrf_token %}
+                    <div class="order__inputs">
+                        <input type="text" placeholder="Услуга" name="service">
+                        <input type="text" placeholder="ФИО" name="name">
+                        <input type="text" placeholder="Телефон" name="phone">
+                        <input type="text" placeholder="Почта" name="mail">
+                    </div>
+                    <div class="order__comments">
+                        <label for="comments">Комментарий</label>
+                        <textarea name="comments" id="" cols="30" rows="10"></textarea>
+                        <input type="submit" value="Заказать">
+                    </div>
+                </div>
+                <div class="order_info">
+                    {% if info %}
+                        <p>{{info}}</p>
+                    {% endif %}
+                    {% if form.errors %}
+                        <div class="alert alert-error">
+                        <!-- <h4></h4> -->
+                        <ul>
+                            {% for field in form %}
+                            {% if field.errors %}
+                                {% for error in field.errors %}
+                                <li><a href="#id_{{ field.name }}" class="error">{{ field.label }} {{ error|escape }}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                        {% if form.non_field_errors %}
+                            {{ form.non_field_errors }}
+                        {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            </form>
+            
+        </div>
+    </main>
+
+    <div class="services">
+        <div class="container">
+            <div class="services__inner">
+                <div class="services__header">
+                    Услуги
+                </div>
+                <div class="services__content">
+                    <div class="services__item">
+                        <a href="{% url 'photo_printing' %}">
+                        <div class="services__title">Фотопечать</div>
+                        <img src="{% static 'img/our_services/items/icon1.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'document_printing' %}">
+                        <div class="services__title">Печать документов</div>
+                        <img src="{% static 'img/our_services/items/icon2.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'photo_processing' %}">
+                        <div class="services__title">Обработка фото</div>
+                        <img src="{% static 'img/our_services/items/icon3.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'blueprints' %}">
+                        <div class="services__title">Печать черчежей</div>
+                        <img src="{% static 'img/our_services/items/icon4.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'brochure_printing' %}">
+                        <div class="services__title">Печать брошюр</div>
+                        <img src="{% static 'img/our_services/items/icon5.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                    <div class="services__item">
+                        <a href="{% url 'shirt_printing' %}">
+                        <div class="services__title">Печать на футболках кружках</div>
+                        <img src="{% static 'img/our_services/items/icon6.png' %}" alt="" class="services__img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'components/footer.html' %}
+{% endblock %}

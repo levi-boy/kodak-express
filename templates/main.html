@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Kodak Express{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    {% include 'components/header.html' %}
+
+    <!-- main -->
+    <main class="main">
+        <!-- intro -->
+        <section class="intro">
+            <div class="container">
+                <div class="intro__inner">
+                    <div class="intro__content">
+                        <div class="intro__title">Фотосалон</div>
+                        <div class="intro__subtitle">Более 10 лет фотосалон «KODAK EXPRESS» предлагает фотоуслуги
+                            высокого качества и по разумной цене.</div>
+                        <a class="intro__btn" href="{% url 'order' %}">Сделать заказ</a>
+                    </div>
+                    <div class="intro__logo">
+                        <div class="intro__text">Воплащаем ваши идеи в жизнь</div>
+                        <div class="intro__photo"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- intro -->
+
+        <!-- main-services -->
+        <section class="main-services">
+            <div class="container">
+                <div class="main-services__inner">
+                    <div class="main-services__title">Основные услуги</div>
+                    <div class="services__slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="{% url 'document_printing' %}">
+                                        <p class="main-services__text">Печать документов</p>
+                                        <div class="main-services__veil"></div>
+                                    </a>
+                                    <img class="main-services__photo" src="{% static 'img/main-services/photo-1.jpg' %}" width="800"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="{% url 'photo_printing' %}">
+                                        <p class="main-services__text">Фотопечать</p>
+                                        <div class="main-services__veil"></div>
+                                    </a>
+                                    <img class="main-services__photo" src="{% static 'img/main-services/photo-2.jpg' %}" width="800"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="{% url 'photo_processing' %}">
+                                        <p class="main-services__text">Обработка фото</p>
+                                        <div class="main-services__veil"></div>
+                                    </a>
+                                    <img class="main-services__photo" src="{% static 'img/main-services/photo-3.jpg' %}" width="800"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="{% url 'blueprints' %}">
+                                        <p class="main-services__text">Печать черчежей</p>
+                                        <div class="main-services__veil"></div>
+                                    </a>
+                                    <img class="main-services__photo" src="{% static 'img/main-services/photo-4.jpg' %}" width="800"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="{% url 'brochure_printing' %}">
+                                        <p class="main-services__text">Печать брошюр</p>
+                                        <div class="main-services__veil"></div>
+                                    </a>
+                                    <img class="main-services__photo" src="{% static 'img/main-services/photo-5.jpg' %}" width="800"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="{% url 'shirt_printing' %}">
+                                        <p class="main-services__text">Печать на футболках и кружках</p>
+                                        <div class="main-services__veil"></div>
+                                    </a>
+                                    <img class="main-services__photo" src="{% static 'img/main-services/photo-6.jpg' %}" width="800"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main-services -->
+
+        <!-- ADVANTAGES -->
+        <div class="advantages">
+            <div class="container">
+                <div class="advantages__inner">
+                    <div class="advantages__title">
+                        Наши преимущества
+                    </div>
+                    <div class="advantages__items">
+                        <div class="advantages__item">
+                            <div class="advantages__item_icon">
+                                <img src="{% static 'img/advantages/items/icon1.png' %}" alt="icon1">
+                            </div>
+                            <div class="advantages__item_text">
+                                Открыты к переговорам
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__item_icon">
+                                <img src="{% static 'img/advantages/items/icon2.png' %}" alt="icon2">
+                            </div>
+                            <div class="advantages__item_text">
+                                Большой опыт
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__item_icon">
+                                <img src="{% static 'img/advantages/items/icon3.png' %}" alt="icon3">
+                            </div>
+                            <div class="advantages__item_text">
+                                Низкие цены
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__item_icon">
+                                <img src="{% static 'img/advantages/items/icon4.png' %}" alt="icon4">
+                            </div>
+                            <div class="advantages__item_text">
+                                Бесплатные консультации
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__item_icon">
+                                <img src="{% static 'img/advantages/items/icon5.png' %}" alt="icon5">
+                            </div>
+                            <div class="advantages__item_text">
+                                Партнерская программа
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__item_icon">
+                                <img src="{% static 'img/advantages/items/icon6.png' %}" alt="icon6">
+                            </div>
+                            <div class="advantages__item_text">
+                                Удобная оплата
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ADVANTAGES -->
+
+        {% include 'components/footer.html' %}
+    </main>
+    <script src="{% static 'js/index.js' %}"></script>
+    <!-- main -->
+{% endblock %}

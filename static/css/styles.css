@@ -1,0 +1,767 @@
+@charset "UTF-8";
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, span {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%;
+  /*to enable resizing for IE*/
+}
+
+/*because legend doesn't inherit in IE */
+
+legend {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.intro {
+  height: 804px;
+  background: linear-gradient(103.74deg, #fdc101 12.37%, #ffca0f 88.05%);
+}
+
+.intro__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 804px;
+}
+
+.intro__left_content {
+  width: 587px;
+  height: 511px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+}
+
+.intro__left_content_title {
+  text-align: center;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 88px;
+  color: #000;
+  padding-top: 20px;
+}
+
+.intro__left_content_text {
+  width: 498px;
+  height: 181.17px;
+  font-family: Century Gothic;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  margin: 30px auto 0px;
+}
+
+.intro__left_content_btn {
+  max-width: 426px;
+  height: 95.13px;
+  background: #ff252e;
+  box-shadow: 0px 9px 35px rgba(255, 37, 46, 0.56);
+  border-radius: 90px;
+  margin: 40px auto 0;
+}
+
+.intro__left_content_btn a {
+  max-width: 426px;
+  height: 95.13px;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 49px;
+  color: #ecf0f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__right_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__right_content_title {
+  font-family: "Caveat", cursive;
+  width: 426.51px;
+  height: 226.76px;
+  font-style: normal;
+  font-size: 80px;
+  line-height: 98.5%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.005em;
+  font-feature-settings: "calt" off, "liga" off;
+  color: #ecf0f3;
+  transform: rotate(-9.52deg);
+  position: relative;
+  bottom: 10px;
+  right: 50px;
+}
+
+.intro__right_content_icon {
+  transform: rotate(-9.52deg);
+  width: 300px;
+}
+
+.swiper-container {
+  width: 1138px;
+  height: 502px;
+}
+
+/* .services {
+  width: 100%;
+  height: 756px;
+  background: #181818;
+}
+.services__title {
+  width: 603px;
+  height: 100px;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 78px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ecf0f3;
+  margin: 0 auto 10px;
+  padding-top: 25px;
+}
+.services__slider {
+  margin-top: 50px;
+  position: relative;
+}
+.services__slider .grow_block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 170px;
+  right: 170px;
+  background-color: rgba(92, 92, 92, 0.3);
+}
+.services__slider .grow_block:hover {
+  background-color: rgba(134, 75, 75, 0.3);
+}
+.services__slider_img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.services__slider_text {
+  position: absolute;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.services__slider_text:hover + .grow_block {
+  background-color: rgba(134, 75, 75, 0.3);
+} */
+
+.advantages {
+  background: #e5e5e5;
+}
+
+.advantages__title {
+  max-width: 758px;
+  height: 97px;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 78px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.advantages__items {
+  margin-top: 74px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.advantages__item {
+  max-width: 360px;
+  min-width: 250px;
+  margin: 15px 40px;
+  flex-basis: 33.3333%;
+  height: 210px;
+  background: #ecf0f3;
+  box-shadow: -18px -18px 30px #ffffff, 18px 18px 60px #d1d9e6;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages__item_icon {
+  display: block;
+  margin: 0 auto;
+  width: 136px;
+  height: 132px;
+}
+
+.advantages__item_text {
+  max-width: 360px;
+  height: 74px;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.our-services {
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 120px;
+  background: linear-gradient(103.74deg, #fdc101 12.37%, #ffca0f 88.05%);
+}
+
+.our-services__title {
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  color: #ffffff;
+}
+
+.our-services__items {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.our-services__item {
+  margin: 20px 10px;
+  max-width: 370px;
+  width: 100%;
+  background: #ecf0f3;
+  box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.our-services__item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-services__item_title {
+  padding-top: 20px;
+  font-family: Century Gothic;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.our-services__item_icon img {
+  max-width: 247px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.our-services__products {
+  margin-top: 50px;
+}
+
+.our-services__products_title {
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.our-services__products_item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1170px;
+  background: #ecf0f3;
+  box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  margin: 50px auto 0;
+}
+
+.our-services__products_item_content span {
+  width: 24px;
+  height: 24px;
+  background: url("../img/our_services/products/check_mark.png") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-right: 20px;
+}
+
+.our-services__products_item_content p {
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.our-services__products_item_icons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.separation {
+  display: block;
+  max-width: 343px;
+  height: 3px;
+  background: #ffffff;
+  margin: 0 auto;
+  margin-top: 55px;
+  margin-bottom: 50px;
+}
+
+.photo-printing-intro {
+  background: url("../img/photo_printing/printer.png") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 946px;
+}
+
+.photo-printing-intro__title {
+  font-family: Century Gothic;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.photo-printing-intro__subtitle {
+  max-width: 803px;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 59px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.photo-printing-content {
+  width: 100%;
+  height: 1400px;
+  background: linear-gradient(103.74deg, #fdc101 12.37%, #ffca0f 88.05%);
+}
+
+.photo-printing-content.photo-printing_s {
+  width: 100%;
+  height: 975px;
+  background: linear-gradient(103.74deg, #fdc101 12.37%, #ffca0f 88.05%);
+}
+
+.photo-printing-content__inner {
+  position: relative;
+}
+
+.photo-printing-content__table {
+  max-width: 988px;
+  height: auto;
+  background: #ecf0f3;
+  /* Тень карточик */
+  box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  position: relative;
+  top: -492px;
+  margin: 0 auto;
+  /* padding-top: 20px; */
+  padding: 20px 15px 20px;
+}
+
+.photo-printing-content__table .tittle {
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #000000;
+}
+
+.photo-printing-content__table_item {
+  max-width: 877px;
+  min-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* .photo-printing-content__table_item .header th {
+  background: #efefef;
+} */
+
+.photo-printing-content__table_item tr {
+  border-bottom: 2px solid #d5d5d5;
+  height: 70px;
+}
+
+.photo-printing-content__table_item tr:hover {
+  background-color: #ecf0f3;
+}
+
+.photo-printing-content__table_item th {
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.photo-printing-content__table_item td {
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.photo-printing-content__table_item .first {
+  padding-left: 40px;
+}
+
+.photo-printing-content__table_item .second {
+  padding-left: 60px;
+}
+
+.photo-printing-content__table_item .third {
+  text-align: right;
+  padding-right: 40px;
+}
+
+.photo-printing-content__other_services {
+  position: absolute;
+  top: 1000px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.photo-printing-content__other_services_title {
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.photo-printing-content__other_services_title_items {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo-printing-content__other_services_title_items :last-child .title {
+  position: relative;
+  top: 13px;
+}
+
+.photo-printing-content__other_services_title_item {
+  width: 182px;
+  height: 195px;
+  background: #ffffff;
+  box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.photo-printing-content__other_services_title_item .title {
+  width: 111.6px;
+  height: 17.77px;
+  font-family: Century Gothic;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.photo-printing-content__other_services_title_item img {
+  width: 121.5px;
+  height: 120.41px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 15px;
+}
+
+.blackout {
+  width: 100%;
+  height: 100%;
+  background: rgba(56, 56, 56, 0.6);
+}
+
+.photo-printing-intro__subtitle.blueprints_ {
+  font-size: 35px;
+}
+
+.photo-printing-content.blueprints_ {
+  height: 350px;
+}
+
+.photo-printing-content.photo_processing_ {
+  height: 159px;
+}
+
+.photo-printing-content.t_shirt_ {
+  height: 700px;
+}
+
+.photo-printing-intro__title.blueprints_ {
+  padding-top: 100px;
+}
+
+.photo-printing-content.document_ {
+  height: 133px;
+}
+
+.photo-printing-content__table.t_shirt_ {
+  top: -410px;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+@media (max-width: 1000px) {
+  .our-services__products_item_icons {
+    display: none;
+  }
+  .our-services__products_item {
+    max-width: 515px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  .our-services__title {
+    font-size: 48px;
+  }
+  .our-services__products_title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 570px) {
+  .photo-printing-content.photo-printing_s {
+    width: 100%;
+    height: 655px;
+    background: linear-gradient(103.74deg, #fdc101 12.37%, #ffca0f 88.05%);
+  }
+}
+
+@media (max-width: 470px) {
+  .photo-printing-content.photo-printing_s {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(103.74deg, #fdc101 12.37%, #ffca0f 88.05%);
+  }
+}
+
+@media (max-width: 470px) {
+  .our-services__title {
+    font-size: 32px;
+    line-height: 0;
+    padding-top: 50px;
+  }
+  .our-services__products_title {
+    font-size: 32px;
+  }
+  .our-services__item_icon img {
+    max-width: 200px;
+  }
+  .our-services__products_item_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .photo-printing-content.photo_processing_ {
+    height: 308px;
+  }
+}

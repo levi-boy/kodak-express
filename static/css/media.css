@@ -1,0 +1,210 @@
+@media (max-width: 1200px) {
+    /* #2e3034 */
+    .footer {
+        height: 100%;
+        background-color: #2e3034;
+        background-image: none;
+    }
+    .footer__inner {
+        flex-wrap: wrap;
+    }
+    .advantages__title {
+        font-size: 32px;
+        display: flex;
+        justify-content: center;
+    }
+    .footer__left_info p, .footer__right_info p {
+        font-size: 20px;
+    }
+    .footer__links {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .photo-printing-content__table_item {
+        min-width: 600px;
+    }
+
+    .photo-printing-intro__subtitle.blueprints_ {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 750px) {
+    .footer__left_info, .footer__right_info {
+        flex-basis: 0;
+        text-align: center;
+    }
+    .footer__inner {
+        padding-top: 0;
+        flex-direction: column;
+    }
+    .photo-printing-content__table_item {
+        min-width: 0;
+    }
+    .photo-printing-intro__title {
+        font-size: 42px;
+    }
+    .photo-printing-intro__subtitle {
+        font-size: 24px;
+    }
+    .intro__left_content_btn {
+        width: 351px;
+        height: 69.13px;
+    }
+    .intro__left_content_btn a {
+        height: 100%;
+        width: auto;
+        font-size: 32px;
+    }
+    .header__links {
+        display: none;
+    }
+    .header__logo {
+        margin: 0 auto;
+        font-size: 41px;
+        height: auto;
+        text-align: center;
+    }
+
+    .photo-printing-content.document_ {
+        height: 0;
+      }
+}
+
+@media (max-width: 570px) {
+    .photo-printing-content__table_item .header th {
+        font-size: 20px;
+    }
+    .photo-printing-content__table_item .first, .photo-printing-content__table_item .second, .photo-printing-content__table_item .third {
+        font-size: 18px;
+    }
+    .photo-printing-content__table_item tr {
+        height: 52px;
+    }
+    .photo-printing-content__table {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .photo-printing-content.blueprints_ {
+        height: 180px;
+    }
+    .photo-printing-content.photo-printing_ {
+        height: 800px;
+    }
+    .photo-printing-content__table .tittle {
+        font-size: 24px;
+        justify-content: center;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 470px) {
+    .photo-printing-content__table .tittle {
+        font-size: 18px;
+    }
+
+    .photo-printing-intro__title {
+        font-size: 32px;
+        line-height: 0px;
+        padding-top: 20px;
+    }
+
+    .photo-printing-content__table {
+        margin: -94px auto;
+    }
+    
+
+    .intro__left_content_btn {
+        width: 300px;
+        height: 49.13px;
+    }
+    .intro__left_content_btn a {
+        font-size: 24px;
+    }
+
+    .photo-printing-content__table_item .header th {
+        font-size: 15px;
+    }
+    .photo-printing-content__table_item .first, .photo-printing-content__table_item .second, .photo-printing-content__table_item .third {
+        font-size: 13px;
+    }
+    .photo-printing-content__table_item tr {
+        height: 45px;
+    }
+
+    .photo-printing-content.photo-printing_ {
+        height: 600px;
+    }
+}
+
+
+@media (max-width: 470px) {
+    .photo-printing-intro__title {
+        font-size: 24px;
+    }
+
+    .photo-printing-intro__subtitle.blueprints_ {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    .intro__left_content_btn {
+        width: 240px;
+        height: 39.13px;
+    }
+    .intro__left_content_btn a {
+        font-size: 18px;
+    }
+
+    .photo-printing-content__table_item .header th {
+        font-size: 10px;
+    }
+    .photo-printing-content__table_item .first, .photo-printing-content__table_item .second, .photo-printing-content__table_item .third {
+        font-size: 8px;
+    }
+    .photo-printing-content__table_item tr {
+        height: 25px;
+    }
+
+    .photo-printing-content.blueprints_ {
+        height: 0;
+        padding-top: 1px;
+    }
+
+    .advantages__title {
+        line-height: normal;
+    }
+
+    .photo-printing-content__table.brochure {
+        margin: 77px auto 0;
+    }
+
+    .photo-printing-content__table.brochure__ {
+        position: relative;
+        top: -300px;
+    }
+
+    .second {
+        display: none;
+    }
+
+    .photo-printing-intro.brochure {
+        height: 727px;
+    }
+}
+
+@media (max-width: 420px) {
+    .photo-printing-content.blueprints_.photo_processing_ {
+        height: 140px;
+    }
+}
+
+@media (max-width: 370px) {
+    .photo-printing-content.blueprints_.photo_processing_ {
+        height: 300px;
+    }
+}

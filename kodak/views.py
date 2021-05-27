@@ -57,7 +57,7 @@ def order(request):
                 except Exception:
                     pass
             email.send()
-            form.save()
+            
             return render(request, 'order.html', {'info': 'Заказ отправлен.'})
         else:
             return render(request, 'order.html', {'form': form})
